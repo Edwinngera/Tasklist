@@ -7,7 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <p> Hello  {{ $name }} </p>
+    <div>
+        @foreach ($tasks as $task)
+        <div> 
+            <a href="{{route('tasks.show', ['id'=>$task->id])}}">{{$task->title}} </a>
+            
+        </div> 
+        @endforeach
+
+    </div>
+
+ 
 </body>
 </html>
